@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Заполнение иформации</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <link rel=stylesheet href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+</head>
+<body>
+    <div class="component">
+        <div class="row" id="profileform">
+            <div class="span9">
+                <h2>Регистрация</h2>
+                <form class="form-horizontal">
+                    
+                    <div class="control-group">
+                        <label class="control-label">Электронная почта</label>
+                        <div class="controls">
+                          <input type="text" name="Email" placeholder="Email">
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label class="control-label">Имя</label>
+                        <div class="controls">
+                          <input type="text" name="Name" placeholder="Имя">
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label class="control-label">Фамилия</label>
+                        <div class="controls">
+                          <input type="text" name="Surname" placeholder="Фамилия">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Год рождения</label>
+                        <div class="controls">
+                          <input type="text" name="Age" placeholder="1994">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Город</label>
+                        <div class="controls">
+                          <input type="text" name="Country" placeholder="Екатеринбург">
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label class="control-label">Camera</label>
+                        <div class="controls">
+                          <input type="text" name="Camera" placeholder="NikonD">
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <div class="controls">
+                          <button type="submit" name="add" class="btn">Сохранить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

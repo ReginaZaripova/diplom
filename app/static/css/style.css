@@ -1,0 +1,30 @@
+#loginer{
+    margin-left: 80%;
+    
+}
+#header{
+    background:url(icon/foto.jpg)repeat-y 50% 50%;
+}
+.form-search{
+    margin-left: 40%;
+}
+h1{
+    text-align: center;
+    padding: 60px;
+}
+#content{
+    background: gray;
+    height: 60px;
+}
+#footer{
+    background: black;
+    height: 80px;
+}
+
+#profileform{
+    background: red;
+    
+}
+.control-group{
+    padding: 5px;
+}

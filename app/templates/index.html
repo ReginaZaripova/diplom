@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>ZZOOMY - онлайн курсы по фотографии от ведущих специалистов</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <link rel=stylesheet href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="row" id='loginer'>
+            <div class="span10">
+                {% for message in get_flashed_messages() %}
+                <p><b>Error</b>: {{ message }}</p>
+                    {% endfor %}
+                    {% if current_user.is_authenticated %}
+                <h2>Hi, {{ current_user.nickname }}!</h2>
+                <p><a href="{{ url_for('logout') }}">Logout</a></p>
+                    {% else %}
+                <a href="{{ url_for('oauth_authorize', provider='facebook') }}"><img src="static/icon/facebook.png" width="50" height="40"></a>
+                <a href="{{ url_for('oauth_authorize', provider='vkontakte') }}"><img src="static/icon/vk.png" width="40" height="40"></a>
+                <a href="{{ url_for('oauth_authorize', provider='google') }}"><img src="static/icon/google.png" width="40" height="40"></a>
+                <a href="{{ url_for('oauth_authorize', provider='twitter') }}"><img src="static/icon/tweet.png" width="40" height="40"></a>
+                    {% endif %}
+             </div> 
+        </div>
+        <div class="row" id="header">
+            <div class="span12">
+                <h1>Онлайн-школа по фотографии</h1>
+                <form class="form-search">
+                <input type="text" class="input-medium search-query">
+                <button type="submit" class="btn">Поиск</button>
+                </form>
+           </div> 
+        </div>
+        
+        <div class="row" id="content">
+            <div class="span12">
+            <h2>Популярные курсы</h2>
+            {{2+2}}
+            </div>
+        </div>
+        <div class="row" id="footer">
+            <div class="span12">
+            {{2+2}}
+            </div>
+        </div>
+        <div></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </div>
+
+</body>
+</html>
